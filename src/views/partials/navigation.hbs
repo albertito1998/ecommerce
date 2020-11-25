@@ -1,0 +1,91 @@
+{{!-- NAVBAR--}}
+{{!-- ADVERTISEMENT --}}
+<div class="card text-center bg-info text-white">
+    <div class="card-header" id="countdown"></div>
+</div>
+
+
+
+
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="/home">Tour</a>
+        <a class="py-2 d-none d-md-inline-block" href="/product">Product</a>
+        <a class="py-2 d-none d-md-inline-block" href="/enterprise">Enterprise</a>
+        <a class="py-2 d-none d-md-inline-block" href="/formvalidation">Cart</a>
+        
+      {{#if user}}
+		    <a href="#" icontext mr-4 dropdown-toggle widget dropdown d-inline-block muted-text white" data-toggle="dropdown">
+			<img class="icon icon-xs rounded-circle" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxEPDhANDQ8PEA4NEA8ODw0PDQ8QEA8QFREWFhURExUYHSggGBolGxMTITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDw0NDisZHxkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAgQFAQMH/8QAMhABAQABAgIHBwMEAwAAAAAAAAECAxEEIQUxQVFhgbESIjJxcpHBQlKhktHw8TNigv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A+qAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADy1eIxx67z7pzoPUZ2pxuV+HafzXjdbK/qy+9gNcZE1cv3Zf1VLHic5+r77UGqKOHHX9Unzl2XZZec5zvgOgAAAAAAAAAAAAAAAAAAAOW7Te8pO11Q6Q1Ocw7JzvzBHieKuXLHlj39tVgUAAAAE9LVuN3xvl2VABraGtM5vPOdz0ZnBZ7ZydmXKtNAAAAAAAAAAAAAAAAAAAY+rn7WVy72pr3bDL6b6MkABQAAAAAB3DLay91lbLFbMQdAAAAAAAAAAAAAAAAAB5cR8GX01lNfVm+OU75fRkAAKAAAAAUAa2jfcx+nH0ZLX0Z7uP0z0QTAAAAAAAAAAAAAAAAABW47UuOM2u292t8mY0ukJ7k+qelZ2wA65soOO7ADiQCIkAju0uB1blLLd9qztmh0dj7tvfl+IgtgAAAAAAAAAAAAAAAAA8eKx3wy+W/25sts2bza9V5M3iuH9jba7y7+QPABQAAAAAAanCY7YY+M3+6lwvD+3vbdpNvNpSbTadU5IOgAAAAAAAAAAAAAAAAAK3HY74b/tsv4WXMpvNr1XkDGE9bSuF2vle+IKAAAAAJ6On7WUxnne6Av8FhthP+3NYck25TsdQAAAAAAAAAAAAAAAAAAAAU+kZyxvjYorvSN5Yz51SAAUAAFvo7ry+U9VRa6PvvWd8/KDQAAAAAAAAAAAAAAAAAABzKyc7dp30HVPX43blhPO/iGtxsnLDn43qUbd+feCWedyu+V3qIKAAAADuOVl3l2vfHAFzR429Wc38Z1/ZdlYy5ocb2Zz/1PzEF4Rwzlm8u88EgAAAAAAAAAABDU1JjN8r/AHqlqcbb8M2nfedBoPLU18cevKfKc6zc9XK9eVvnyQBc1OO/bPO/2Vc9S5c8raiAAKAAAAAAAAAAO45WXeWy+C1p8dZ8U38ZyqoINTT4nHLt2vdeT2YqWGpZ1Wz5UGwM7T43KfFtlPtV3R1pn1ec7YD0AAAAQ1c5jjcr2fymo9I5fDj5/wCfyCrqalyu9/14IgoAAAAAAAAAAAAAAAAAAAAO45WXecrHAGrw+r7eO/b1WeL1Z3AZbZ7funp/laKAAAz+kPjn0z1oAqgKAAAAAAAAAAAAAAAAAAAAAAPbgv8Akx8/StQEAAH/2Q==">
+			
+				Hi, {{user.username}}
+			
+		</a> 
+    	<div class="dropdown-menu dropdown-menu-right">
+		    <a class="dropdown-item" href="#">My profile</a>
+		    <a class="dropdown-item"  href="#photo" data-toggle="modal" data-target="#photo" >Settings</a>
+		    <a class="dropdown-item" href="/logout" >Log out</a>
+		</div>
+
+     {{else}}
+   <a class="btn btn-sm btn-outline-secondary py-2 d-none d-md-inline-block" href="/signup">Sign up</a>
+        <a class="btn btn-sm btn-outline-secondary py-2 d-none d-md-inline-block" href="/login">Log-In</a>
+        {{/if}}
+
+
+
+      </div>
+
+    </nav>
+
+    	
+
+
+
+{{!--
+    <script>
+      var end = new Date();
+
+console.log(end.setHours((24-end.getHours())+end.getHours()));
+
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+         document.getElementById('countdown').innerHTML = 'NEW OFFERSS!!      '; 
+         document.getElementById('countdown').innerHTML +='<img src="Front-End/paquete.svg" width="20" height="20" alt="" />  '
+        document.getElementById('countdown').innerHTML +='<img src="Front-End/camion-de-reparto.svg" width="20" height="20" alt="" />   '
+        document.getElementById('countdown').innerHTML +='<img src="Front-End/caja-de-regalo.svg" width="20" height="20" alt="" />   '
+        document.getElementById('countdown').innerHTML += '    '+ days + ' dias, ';
+        document.getElementById('countdown').innerHTML += hours + ' horas, ';
+        document.getElementById('countdown').innerHTML += minutes + ' minutos y ';
+        document.getElementById('countdown').innerHTML += seconds + ' segundos';
+    }
+   
+       
+
+    timer = setInterval(showRemaining, 1000);
+
+    </script>
+    --}}

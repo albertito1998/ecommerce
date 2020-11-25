@@ -1,0 +1,235 @@
+ <main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+
+
+{{!-- ============================ COMPONENT 1 ================================= --}}
+{{#each productInfo}}
+<div class="card">
+	<div class="row no-gutters">
+		<aside class="col-md-6">
+<article class="gallery-wrap"> 
+<div class="img-big-wrap">
+  <div> <a href="#"> <img src="../{{photo}}" class="img-fluid" alt="Responsive image">
+</a></div>
+</div> <!-- slider-product.// -->
+<div class="thumbs-wrap">
+  <a href="#" class="item-thumb"> <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg"></a>
+  <a href="#" class="item-thumb"> <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg"></a>
+  <a href="#" class="item-thumb"> <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg"></a>
+  <a href="#" class="item-thumb"> <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg"></a>
+</div> <!-- slider-nav.// -->
+</article> <!-- gallery-wrap .end// -->
+		</aside>
+		<main class="col-md-6 border-left">
+<article class="content-body">
+
+<h2 class="title">{{name}}</h2>
+
+<div class="rating-wrap my-3">
+	<ul class="rating-stars">
+		<li style="width:80%" class="stars-active"> 
+			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> 
+		</li>
+		<li>
+			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> 
+		</li>
+	</ul>
+	<small class="label-rating text-muted">132 reviews</small>
+	<small class="label-rating text-success"> <i class="fa fa-clipboard-check"></i> 154 orders </small>
+</div> <!-- rating-wrap.// -->
+
+<div class="mb-3"> 
+	<var class="price h4">{{price}} $</var> 
+	<span class="text-muted">/per unit</span> 
+</div> <!-- price-detail-wrap .// -->
+
+<p class="text-justify">{{description}}</p>
+
+
+<dl class="row">
+  <dt class="col-sm-3">Model</dt>
+  <dd class="col-sm-9">{{name}}</dd>
+
+  <dt class="col-sm-3">Color</dt>
+  <dd class="col-sm-9">Brown</dd>
+
+  <dt class="col-sm-3">Delivery</dt>
+  <dd class="col-sm-9">Russia, USA, and Europe </dd>
+</dl>
+
+<hr>
+	<div class="form-row">
+		<form class="formProduct" name="formproduct" action="/add/{{idproduct}}" id="formproduct" method="post">
+				
+		<div class="form-group col-md flex-grow-0">
+
+			<label>Quantity</label>
+			<div class="input-group mb-3 input-spinner">
+			  <div class="input-group-prepend">
+			    <button class="btn btn-light" type="button" id="button-plus"> + </button>
+			  </div>
+			  <input type="text" name="cantidad" class="form-control" value="1">
+			  <div class="input-group-append">
+			    <button class="btn btn-light" type="button" id="button-minus"> &minus; </button>
+			  </div>
+			</div>
+		</div> <!-- col.// -->
+		<div class="form-group col-md">
+				<label>Select size</label>
+				<div class="mt-1">
+					<label class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" name="talla" checked="" value="Small" class="custom-control-input">
+					  <div class="custom-control-label">Small</div>
+					</label>
+
+					<label class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" name="talla" value="Medium" class="custom-control-input">
+					  <div class="custom-control-label">Medium</div>
+					</label>
+
+					<label class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" name="talla" value="Large" class="custom-control-input">
+					  <div class="custom-control-label">Large</div>
+					</label>
+
+				</div>
+		</div> <!-- col.// -->
+     <!--<a href="/formvalidation" class="btn  btn-primary"> Buy now </a>-->
+		<button class="btn  btn-outline-primary" type="submit"> <i class="fas fa-shopping-cart"></i>Add to cart</button>
+	</form>
+	
+	</div> <!-- row.// -->
+
+	
+</article> <!-- product-info-aside .// -->
+		</main> <!-- col.// -->
+	</div> <!-- row.// -->
+
+	{{/each}}
+</div> <!-- card.// -->
+<!-- ============================ COMPONENT 1 END .// ================================= -->
+
+<!-- ============================ COMPONENT 2 .// ================================= -->
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-6 text-center">
+
+          <h4 class="my-4 h4">Additional information</h4>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
+            voluptates,
+            quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+
+
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+<!-- ============================ COMPONENT 2 END .// ================================= -->
+    
+<!-- ============================ COMPONENT 3 ================================= -->
+<div class="row">
+<div class="col-md-4">	
+		<article class="card card-body">
+			<figure class="itemside">
+				<div class="aside">
+					<span class="icon-sm rounded-circle bg-primary">
+						<i class="fa fa-money-bill-alt white"></i>
+					</span>
+				</div>
+				<figcaption class="info">
+					<h5 class="title">Reasonable prices</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labor </p>
+				</figcaption>
+			</figure> <!-- iconbox // -->
+		</article> <!-- panel-lg.// -->
+	</div><!-- col // -->
+	<div class="col-md-4">
+		<article class="card card-body">
+			<figure class="itemside">
+				<div class="aside">
+					<span class="icon-sm rounded-circle bg-secondary">
+						<i class="fa fa-comment-dots white"></i>
+					</span>
+				</div>
+				<figcaption class="info">
+					<h5 class="title">Customer support 24/7 </h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labor </p>
+				</figcaption>
+			</figure> <!-- iconbox // -->
+		</article> <!-- panel-lg.// -->
+	</div><!-- col // -->
+	<div class="col-md-4">
+		<article class="card card-body">
+			<figure class="itemside">
+				<div class="aside">
+					<span class="icon-sm rounded-circle bg-success">
+						<i class="fa fa-truck white"></i>
+					</span>
+				</div>
+				<figcaption class="info">
+					<h5 class="title">Quick delivery</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labor </p>
+				</figcaption>
+			</figure> <!-- iconbox // -->
+		</article> <!-- panel-lg.// -->
+	</div><!-- col // -->
+</div> <!-- row.// -->
+<!-- ============================ COMPONENT 3 END .// ================================= -->
+
+<br>
+
+
+
+    
+ </main>
+
+
+ 

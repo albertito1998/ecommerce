@@ -1,0 +1,53 @@
+
+    
+    <main role="main">
+
+<div class="container">
+<br>
+    <h1 style="text-align: center; font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;">OUR PRODUCTS</h1>
+    <h3 class="text-muted" style="text-align: center;">Discover new expectations</h3>
+    <hr>
+      <br>
+    <div class="row">
+  {{#each product}}
+        <div class="col-md-4 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="/productInfo/{{idproduct}}">
+                        <img class="img-fluid" alt="Responsive image" src="{{photo}}">
+                    </a>
+                    <ul class="social">
+                        <li><a href="/productInfo/{{idproduct}}" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="/formvalidation" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star disable"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="/productInfo/{{idproduct}}">{{name}}</a></h3>
+                    <div class="price">{{price}} $
+                        <span>{{discount price}} $</span>
+                    </div>
+                    <a class="add-to-cart" href="/formvalidation">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+     {{/each}}
+    </div>
+</div>
+<hr>
+
+       
+      </main>
+
+
+      
